@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/css/estilo.css">
+    <link rel="stylesheet" href="/admin/css/pequeno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <title>Escritorio</title>
+</head>
+<body>
+   <header>
+   <div class="sidebar" id="sidebar">
+  <div class="logo">
+    <img src="/imagenes/logo-grande.png" alt="Logo Grande" class="logo-expandido">
+    <img src="/imagenes/logo-mini.png" alt="Logo Miniatura" class="logo-compacto">
+  </div>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i><span class="menu-text">Inicio</span></a></li>
+    <li class="submenu">
+      <a href="#"><i class="fa-solid fa-list-check"></i> <span class="menu-text">Gestionar</span></a>
+      <ul>
+        
+        <li><a href="#"><i class="fa-solid fa-headset"></i><span class="menu-text">Turnos</span></a></li>
+        
+      </ul>
+    </li>
+
+    <li class="submenu">
+        <a href="#"><i class="fa-solid fa-user-tie"></i><span class="menu-text">Administrar</span></a>
+        <ul>
+          <li><a href="parqueaderos.html"><i class="fa-solid fa-square-parking"></i><span class="menu-text">Parqueaderos</span></a></li>
+          <li><a href="estacionamientos.html"><i class="fa-solid fa-square-parking"></i><span class="menu-text">Estacionamientos</span></a></li>  
+        <li><a href="#"><i class="fa-solid fa-users"></i><span class="menu-text">Usuarios</span></a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i><span class="menu-text">Configuracion</span></a></li>
+         </ul>
+      </li>
+
+    <li><a href="#"><i class="fa-solid fa-headset"></i><span class="menu-text">Soporte</span></a></li>
+  </ul>
+</div>
+
+
+<nav class="navbar">
+    <ul class="navbar-menu">
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Servicios</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Diseño Web</a></li>
+        
+        </ul>
+      </li>
+      <li><a href="#">Cerrar Sesion</a></li>
+     
+    </ul>
+  </nav>
+</header> 
+
+<main>
+  <div class="contenido-principal">
+    <h1 class="centrar">Informacion</h1>
+    <p class="centrar">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño</p>
+
+    <div class="columna">
+
+    <div class="tarjeta-parking2">
+        <h4>Estado actual parqueadero 1</h4>
+ 
+        <span>Disponibles: 3</span> | <span><a href="#" target="_blank" rel="noopener noreferrer">Vista detalles</a></span>
+        <hr class="linea-windows">
+        <div class="columna">
+
+          
+       <div class="espacio">
+        <div class="hora-salida ocupado">
+        <span>12:30 PM</span>
+      </div>
+      <div class="n-parking">
+        <span><a class="a-parking" id="abrirModal" href="#" target="_blank" rel="noopener noreferrer">P1-E1</a></span>
+
+  </div>
+  <div class="p-vehiculo">
+    
+    <span>Carlos Parra</span>
+  </div>
+ </div>
+
+ <div id="modal" class="modal">
+  <div class="contenido-modal">
+    <div class="encabezado-modal">
+      <h2>Registro de ingreso</h2>
+
+    </div>
+    <hr class="linea-windows">
+    <div class="cuerpo-modal">
+      
+      <form action="#" method="POST" class="formulario">
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="primer-n">Primer Nombre:</label>
+          <input type="text" name="primer-n" placeholder="Ingresa tu primer nombre" required>
+          
+          <label for="segundo-n">Segundo Nombre:</label>
+          <input type="text" id="segundo-n" name="segundo-n" placeholder="Ingresa tu segundo nombre">
+
+          <label for="primer-a">Primer Apellido:</label>
+          <input type="text" id="primer-a" name="primer-a" placeholder="Ingresa tu primer apellido" required>
+
+          <label for="segundo-a">Segundo Apellido:</label>
+          <input type="text" id="segundo-a" name="segundo-a" placeholder="Ingresa tu segundo apellido">
+
+          <label for="telefono">Número de Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ingresa tu teléfono" required>
+
+          <label for="tipo-documento">Tipo de Documento:</label>
+          <select id="tipo-documento" name="tipo-documento" required>
+            <option value="">-- Seleccione una opción --</option>
+            <option value="cedula">Cédula</option>
+            <option value="extranjera">Cédula Extranjera</option>
+            <option value="pasaporte">Pasaporte</option>
+          </select>
+
+          <label for="documento">Número de Documento:</label>
+          <input type="text" id="documento" name="documento" placeholder="Ingresa tu documento" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Información del Vehículo</legend>
+          <label for="placa">Placa del Vehículo:</label>
+          <input type="text" id="placa" name="placa" placeholder="Ingresa la placa" required>
+
+          <label for="marca-modelo-color">Marca, Modelo y Color:</label>
+          <input type="text" id="marca-modelo-color" name="marca-modelo-color" placeholder="Ej: Toyota Corolla Rojo">
+
+          <label for="tipo-vehiculo">Tipo de Vehículo:</label>
+          <select id="tipo-vehiculo" name="tipo-vehiculo" required>
+            <option value="">Seleccione una opción</option>
+            <option value="moto">Moto</option>
+            <option value="carro">Carro</option>
+            <option value="camioneta">Camioneta</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Servicios de Registro</legend>
+          <label for="entrada">Fecha y Hora de Entrada:</label>
+          <input type="datetime-local" id="entrada" name="entrada" required>
+
+          <label for="salida">Fecha y Hora de Salida:</label>
+          <input type="datetime-local" id="salida" name="salida">
+
+          <label for="espacio">Espacio Asignado:</label>
+          <input type="text" id="espacio" name="espacio" placeholder="Ej: P1-E2" required>
+        </fieldset>
+
+        <button type="submit" class="boton">Registrar</button>
+      </form>
+
+      
+    </div>
+    <div class="pie-modal">
+      <button class="cerrar" id="cerrarModal"><i class="fa-solid fa-xmark"></i></button>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="espacio">
+        <div class="hora-salida disponible">
+        <span>Disponible</span>
+      </div>
+      <div class="n-parking">
+    <span><a class="a-parking" id="abrirModal" href="#">P1-E2</a></span>
+
+
+  
+
+  </div>
+  <div class="p-vehiculo">
+  <span></span>
+  </div>
+</div>
+
+
+  <div class="espacio">
+    <div class="hora-salida reservado">
+    <span>2:30 PM</span>
+  </div>
+  <div class="n-parking">
+    <span><a class="a-parking" href="#" target="_blank" rel="noopener noreferrer">P1-E3</a></span>
+</div>
+<div class="p-vehiculo">
+<span>Reservado</span>
+</div>
+</div>
+
+<div class="espacio">
+  <div class="hora-salida ocupado">
+  <span>12:30 PM</span>
+</div>
+<div class="n-parking">
+  <span><a class="a-parking" href="#" target="_blank" rel="noopener noreferrer">P1-E4</a></span>
+</div>
+<div class="p-vehiculo">
+
+<span>Oswaldo</span>
+</div>
+
+ </div>
+
+
+ <div class="espacio">
+  <div class="hora-salida disponible">
+  <span>Disponible</span>
+</div>
+<div class="n-parking">
+  <span><a class="a-parking" href="#" target="_blank" rel="noopener noreferrer">P1-E5</a></span>
+</div>
+<div class="p-vehiculo">
+<span></span>
+</div>
+</div>
+
+
+<div class="espacio">
+<div class="hora-salida disponible">
+<span>Disponible</span>
+</div>
+<div class="n-parking">
+  <span><a class="a-parking" href="#" target="_blank" rel="noopener noreferrer">P1-E6</a></span>
+</div>
+<div class="p-vehiculo">
+<span></span>
+</div>
+
+
+
+       </div>
+    
+    </div>
+
+
+   
+  </div>
+</div>
+</div>
+
+
+</main>
+<script>
+
+const sidebar = document.getElementById("sidebar");
+
+sidebar.addEventListener("mouseenter", () => {
+  sidebar.classList.add("expanded"); 
+});
+
+sidebar.addEventListener("mouseleave", () => {
+  sidebar.classList.remove("expanded"); 
+});
+
+//Iniciar script del navbar
+const toggle = document.getElementById("navbar-toggle");
+const menu = document.getElementById("navbar-menu");
+
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("active"); 
+});
+
+
+ </script>
+
+<script>
+  const modal = document.getElementById('modal');
+const abrirModal = document.getElementById('abrirModal');
+const cerrarModal = document.getElementById('cerrarModal');
+
+abrirModal.addEventListener('click', (e) => {
+  e.preventDefault(); 
+  modal.style.display = 'flex';
+});
+
+cerrarModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+  </script>
+
+</body>
+</html>
